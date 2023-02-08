@@ -97,7 +97,8 @@ var TodoListApp = (function () {  // IIFE function used so that multiple JS file
     // Deleting the task
     function deleteTask(taskId) {
         const newTasks = tasks.filter(function (task) { // filter used to search and return those tasks which is not equal to taskId
-            return task.id !== Number(taskId); // in fectching API, id name is not in number form. so, we used Number() 
+            return task.id !== Number(taskId) && task.id !== (taskId)  ;  // in fectching API, id name is not in number form. so, we used Number() 
+            // return ;
         });
         tasks = newTasks;
         renderList();
