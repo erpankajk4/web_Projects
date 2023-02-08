@@ -1,4 +1,4 @@
-# Todo list app - https://erpankajk4.github.io/web-devlopment-projects/
+# Todo list app - https://erpankajk4.github.io/web_Projects/
 A todo list app
 
 
