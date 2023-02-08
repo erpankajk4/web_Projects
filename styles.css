@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+    radial-gradient(gray 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px;
+}
+
+/* Background Styling -  https://www.makeuseof.com/css-background-patterns-examples/ */
+
+h1 {
+  background-color: #ffcbcb;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#container {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 6px 8px 0px #7c7c7c;
+  background-image: repeating-linear-gradient(90deg, rgb(255, 223, 223), rgb(255, 255, 255) 1px);
+}
+
+/* Task List Styling  */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #e5e5e5; */
+  transition: all 0.5s ease-in-out;
+}
+
+ul li {
+  padding: 10px;
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+
+ul li:hover {
+  background-image: repeating-linear-gradient(0deg, rgb(255, 195, 195), rgb(255, 255, 255) 1px);
+}
+
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+#list label:before {
+  content: '';
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#list input:checked+label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#list input:checked+label:before {
+  background: #0079bf;
+}
+
+#list input:checked+label {
+  text-decoration: line-through;
+}
+
+.delete {
+  height: 28px;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+
+.delete:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+/* End Task List Styling  */
+
+h1 {
+  text-align: center;
+}
+
+.add-task {
+  position: relative;
+  left: 0px;
+  width: 75%;
+  outline: none;
+  font-size: 15px;
+  padding: 11px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px 0px 0 0;
+  margin-bottom: 3px;
+  background-color: #ffdcdc;
+  margin-right: 0;
+}
+
+/* Total Tasks Styling  */
+.total-tasks {
+  margin-bottom: 10px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: gray;
+}
+
+.Completed {
+  position: relative;
+  left: 114px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: gray;
+}
+
+.Uncomplete {
+  position: relative;
+  left: 213px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: gray;
+}
+
+/* End Total Tasks Styling  */
+
+/* Add Button */
+#addBtn {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  border: 2px solid #ffbebe;
+  border-radius: 0 10px 0 0;
+  padding: 10px;
+  width: 24%;
+  background: #ffbebe;
+  color: #ff3e3e;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+#addBtn:hover {
+  text-decoration: underline;
+}
+
+/* End Add Button */
+hr {
+  border-top: 1px dashed rgb(255, 183, 183);
+}
